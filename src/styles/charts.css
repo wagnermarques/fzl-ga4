@@ -1,0 +1,61 @@
+/* Tokens dos gráficos. A paleta categórica é a de referência da skill de
+   dataviz (validada: CVD adjacente >= 8.4, visão normal >= 19.3, contra as
+   superfícies #fffbfe / #1c1b1f do tema do appshell). A ORDEM dos slots é
+   parte da validação — não reordene sem revalidar. Em tema claro, aqua,
+   amarelo e magenta ficam abaixo de 3:1 contra a superfície: por isso os
+   gráficos têm legenda com rótulos e a opção "ver tabela". */
+:root {
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+  --series-5: #e87ba4;
+  --series-6: #008300;
+  --series-7: #4a3aa7;
+  --series-8: #e34948;
+  --series-other: #898781;
+
+  --chart-grid: #e7e0ec;
+  --chart-axis: #c9c4d0;
+  --chart-muted: #79747e;
+  --delta-up: #006300;
+  --delta-down: #b3261e;
+  --card-border: rgba(28, 27, 31, 0.12);
+}
+
+:root[data-theme='dark'],
+:root[data-theme='high-contrast-dark'] {
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #199e70;
+  --series-4: #c98500;
+  --series-5: #d55181;
+  --series-6: #008300;
+  --series-7: #9085e9;
+  --series-8: #e66767;
+  --chart-grid: #2f2d33;
+  --chart-axis: #49454f;
+  --chart-muted: #938f99;
+  --delta-up: #0ca30c;
+  --delta-down: #f2b8b5;
+  --card-border: rgba(255, 255, 255, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']):not([data-theme='high-contrast-light']):not([data-theme='dark']):not([data-theme='high-contrast-dark']) {
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --series-5: #d55181;
+    --series-6: #008300;
+    --series-7: #9085e9;
+    --series-8: #e66767;
+    --chart-grid: #2f2d33;
+    --chart-axis: #49454f;
+    --chart-muted: #938f99;
+    --delta-up: #0ca30c;
+    --delta-down: #f2b8b5;
+    --card-border: rgba(255, 255, 255, 0.12);
+  }
+}
